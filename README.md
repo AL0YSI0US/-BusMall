@@ -14,7 +14,6 @@ blurbies.............
 + Attach an event listener to the section of the HTML page where the images are going to be displayed.
 + Once the users "click"" a product, generate three new products for the user to pick from.
 
-
 ## Designer: [aloe-wish-iss]
 
 [![banner](https://github.com/AL0YSI0US/about-me/raw/main/img/bannerNameArt.JPG?raw=true)](https://github.com/AL0YSI0US/about-me/blob/main/img/bannerNameArt.JPG?raw=true)
@@ -22,7 +21,6 @@ blurbies.............
 ## C O L L A B O R A T I O N
 
 * **In Collaboration With humxn** | thing they helped with
-
 
 ## R E F L E C T I O N S
 
@@ -35,12 +33,20 @@ blurbies.............
 + February 13, 2021 WCAG 2.1 AA Level Web Accessibility Audit | Verdict : **Non-Compliant**
 + February 13, 2021 WAVE Web Accessibility Evaluation | Verdict : **Non-Compliant**
 
-
 ## L I N K S  &  R E S O U R C E S
 
-+ [Cookie Stand Tutorial](https://codefellows.github.io/code-201-guide/curriculum/class-11/lab/) *class guide*
++ [bus-mall Tutorial](https://codefellows.github.io/code-201-guide/curriculum/class-11/lab/) *class guide*
 + [CSS reset](https://meyerweb.com/eric/tools/css/reset/) *Meyers Reset*
++ [Getting a random integer between two values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_integer_between_two_values "Permalink to Getting a random integer between two values")
 
+```javascript
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * all; //The maximum is exclusive and the minimum is inclusive
+}
+```
+
+
+*
 
 <!--
 
