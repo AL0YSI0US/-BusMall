@@ -1,13 +1,6 @@
 # LAB - 11
 
-## bus-mall 
-![cs](https://img.shields.io/github/license/AL0YSI0US/bus-mall) 
-
-![open-pr](https://img.shields.io/github/issues-pr-raw/AL0YSI0US/bus-mall) 
-
-![closed-pr](https://img.shields.io/github/issues-pr-closed/AL0YSI0US/bus-mall) 
-
-[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
+## bus-mall ![cs](https://img.shields.io/github/license/AL0YSI0US/bus-mall) ![open-pr](https://img.shields.io/github/issues-pr-raw/AL0YSI0US/bus-mall) ![closed-pr](https://img.shields.io/github/issues-pr-closed/AL0YSI0US/bus-mall) [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
 
 **Hello there**,
 
