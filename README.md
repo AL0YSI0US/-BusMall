@@ -20,7 +20,7 @@ blurbies.............
 
 ## C O L L A B O R A T I O N
 
-* **In Collaboration With humxn** | thing they helped with
+* **In Collaboration With Audrey**/ **TA Ron**/**Shelby / Lorenzo** | pop method / while loop logic
 
 ## R E F L E C T I O N S
 
@@ -44,7 +44,6 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * all; //The maximum is exclusive and the minimum is inclusive
 }
 ```
-
 
 *
 
