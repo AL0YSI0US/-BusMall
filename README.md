@@ -41,6 +41,8 @@ The JavaScript was set up in a way that I could come back and add more theoretic
 
 [CSS reset](https://meyerweb.com/eric/tools/css/reset/) *Meyers Reset*
 
+[Google Fonts | Orbitron](https://fonts.google.com/specimen/Orbitron?preview.text_type=custom)
+
 #### [Getting a random integer between two values | Math.random Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_integer_between_two_values "Permalink to Getting a random integer between two values")
 
 ```javascript
@@ -80,10 +82,13 @@ console.log(plants);
 ```
 ````
 
-#### [Google Fonts | Orbitron](https://fonts.google.com/specimen/Orbitron?preview.text_type=custom)
 
-![Orbitron](img/orbitron.jpg)
 
+#### Creative Commons License
+
+This work by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/AL0YSI0US/" property="cc:attributionName" rel="cc:attributionURL">AL0YSI0US</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />
+
+This license lets others distribute, remix, adapt, and build upon your work, even commercially, as long as they credit you for the original creation. This is the most accommodating of licenses offered. Recommended for maximum dissemination and use of licensed materials.
 
 
 <!--
@@ -91,5 +96,3 @@ console.log(plants);
 ![Profile views](https://gpvc.arturio.dev/AL0YSI0US)
 
 -->
-
-#### Creative Commons License
