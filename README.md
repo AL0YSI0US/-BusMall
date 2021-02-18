@@ -44,7 +44,7 @@ This lab was a rollecoaster for me! It helped me develop a new strategy for lern
 
 The main thing I am realizing is that developing tact in my code is very important. Tact in relationship to what is the standard for design and functionality and the intersections that will allowme to be creative.
 
-The biggest hurdle I have had is with my naming conventions. Bus mall really drove this home with DOM rendering and labeling sections or containers etc. Mess those up and you may just have those fuddles follow you into the css. I have had moments where I though data was not populating only to find out that I never set any styling parameters to show my said data. 
+The biggest hurdle I have had is with my naming conventions. Bus mall really drove this home with DOM rendering and labeling sections or containers etc. Mess those up and you may just have those fuddles follow you into the css. I have had moments where I though data was not populating only to find out that I never set any styling parameters to show my said data.
 
 My ongoing strategy is to ease up on how I want to name things because sometimes what i want to call something poorly reflects what that something does.
 
@@ -138,12 +138,16 @@ console.log('Removed this element:', shifted);
 
 ````
 
+<<<<<<< HEAD
 ![access](https://github.com/AL0YSI0US/about-me/blob/main/img/8grid.png?raw=true)
 
 ## Accessibility Data for Website: al0ysi0us.github.io/cookie-stand
 
 + February 15, 2021 WCAG 2.1 AA Level Web Accessibility Audit | Verdict : **Compliant**
 + February 15, 2021 WAVE Web Accessibility Evaluation | Verdict : **Compliant**
+
+This work by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/AL0YSI0US/" property="cc:attributionName" rel="cc:attributionURL">AL0YSI0US</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />
+=========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 This work by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/AL0YSI0US/" property="cc:attributionName" rel="cc:attributionURL">AL0YSI0US</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />
 
