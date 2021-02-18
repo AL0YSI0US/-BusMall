@@ -50,12 +50,12 @@ function renderProduct() {
   let productIndexArray = [];
   while (productIndexArray.length < 3) {
     let randomNumber = getRandomIndex();
-    while (!productIndexArray.includes(randomNumber)){
+    while (!productIndexArray.includes(randomNumber)) {
       productIndexArray.push(randomNumber);
     }
   }
 
-// [.includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) *Developer.mozilla*
+  // [.includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) *Developer.mozilla*
 
   let firstProductIndex = productIndexArray.pop();
   let secondProductIndex = productIndexArray.pop();
@@ -78,31 +78,34 @@ function renderProduct() {
   allProducts[thirdProductIndex].views++;
 }
 
-function renderResults() {
-  let andTheWinnersAre = document.querySelector('ul');
-  for (let i = 0; i < allProducts.length; i++){
-    let li = document.createElement('li');
-    li.textContent = `${allProducts[i].name} had ${allProducts[i].votes} votes and was seen ${allProducts[i].views} times.`;
-    andTheWinnersAre.appendChild(li);
-  }
-}
-
 function handleClick(event) {
   if (event.target === votingArena) {
     alert('Please click on an image.');
   }
   totalVotes++;
-  let prodctClicked = event.target.title;
+  let productClicked = event.target.title;
 
   for (let i = 0; i < allProducts.length; i++) {
-    if (prodctClicked === allProducts[i].name) {
+    if (productClicked === allProducts[i].name) {
       allProducts[i].votes++;
     }
   }
-
   renderProduct();
   if (totalVotes === votesAuthorized) {
-    votingArena.removeEventListener('click', handleClick);
+    // REMOVE EVENT LISTENER
+    myContainer.removeEventListener('click', handleClick);
+  }
+}
+renderChart();
+//                                                                    SOMEBODY GOT A LIL OUT OF ORDER Time for a walk
+//                                       VVVV------------place this stuff in the right place 
+
+function renderResults() {
+  let andTheWinnersAre = document.querySelector('ul');
+  for (let i = 0; i < allProducts.length; i++) {
+    let li = document.createElement('li');
+    li.textContent = `${allProducts[i].name} had ${allProducts[i].votes} votes and was seen ${allProducts[i].views} times.`;
+    andTheWinnersAre.appendChild(li);
   }
 }
 
@@ -113,8 +116,59 @@ function handleButton(event) {
 }
 
 renderProduct();
-votingArena.addEventListener('click', handleClick);
+myContainer.addEventListener('click', handleClick);
 viewResultsButton.addEventListener('click', handleButton);
+
+///////////////////////                  create the function for the chart                    ////////////////////////////////////////
+
+function renderChart() {
+  let ProductNames = [];
+  let ProductViews = [];
+  let ProductVotes = [];
+  for (let i = 0; i < allProducts.length; i++) {
+    ProductNames.push(allProducts[i].name);
+    ProductViews.push(allProducts[i].views);
+    ProductVotes.push(allProducts[i].Votes);
+  }
+  console.log('ProductNames: ', ProductNames);
+  console.log('ProductViews', ProductViews);
+  console.log('ProductVotes', ProductVotes);
+  var chartObject = {
+    type: 'bar',
+    data: {
+      labels: ProductNames,
+      datasets: [{
+        label: 'Views',
+        data: ProductViews,
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 3
+      },
+      {
+        label: 'Votes',
+        data: ProductVotes,
+        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+        borderColor: 'rgba(153, 102, 255, 1)',
+        borderWidth: 3
+      }]
+    },
+    responsive: false,
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  };
+
+  let ctx = document.getElementById('chartainer').getContext('2d');
+  let myChart = new Chart(ctx, chartObject);
+}
+myContainer.addEventListener('click', handleClick);
+
 
 // const sentence = 'The quick brown fox jumps over the lazy dog.';
 // const word = 'fox';
