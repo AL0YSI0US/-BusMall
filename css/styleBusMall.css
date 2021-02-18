@@ -123,3 +123,21 @@ li {
   transform: translateX(-100%); 
   }
  }
+
+ table {
+	border-collapse: separate;
+  border-spacing: 5px;
+  border: medium solid rgb(2, 114, 184);
+  margin: 25px auto;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid rgb(1, 158, 164);
+  border-radius: 5px;;
+}
+
+th {
+  background-color: rgba(0, 34, 70, 0.5);
+  font-weight: bold;
+}

@@ -46,6 +46,11 @@ The JavaScript was set up in a way that I could come back and add more theoretic
 #### [Getting a random integer between two values | Math.random Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_integer_between_two_values "Permalink to Getting a random integer between two values")
 
 ```javascript
+               > This example returns a random integer between 
+                 the specified values. The value is no lower than 
+                 min (or the next integer greater than min if min 
+                 is not an integer), and is less than (but not equal to) max.
+
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * all; //The maximum is exclusive and the minimum is inclusive
 }
@@ -55,6 +60,11 @@ function getRandomInt(min, max) {
 #### [String.prototype.includes | .includes Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
 
 ````javascript
+                    > his method lets you determine whether 
+                      or not a string includes another string.
+
+                       $ this method is case sensitive $
+
 const sentence = 'The quick brown fox jumps over the lazy dog.';
 
 const word = 'fox';
@@ -66,6 +76,9 @@ console.log(`The word "${word}" ${sentence.includes(word) ? 'is' : 'is not'} in 
 #### [Array.prototype.pop() | .pop Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 
 ````javascript
+                >The pop method removes the last element from an array
+                 and returns that value to the caller.
+
 const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
 
 console.log(plants.pop());
@@ -79,6 +92,30 @@ plants.pop();
 console.log(plants);
 // expected output: Array ["broccoli", "cauliflower", "cabbage"]
 ````
+
+#### [Array.prototype.shift() | .shift Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+
+````javascript
+                 > The following code displays the myFish array before 
+                   and after removing its first element. 
+                   It also displays the removed element:
+
+var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
+
+console.log('myFish before:', JSON.stringify(myFish));
+// myFish before: ['angel', 'clown', 'mandarin', 'surgeon']
+
+var shifted = myFish.shift();
+
+console.log('myFish after:', myFish);
+// myFish after: ['clown', 'mandarin', 'surgeon']
+
+console.log('Removed this element:', shifted);
+// Removed this element: angel
+```
+````
+
+
 
 <!--
 
