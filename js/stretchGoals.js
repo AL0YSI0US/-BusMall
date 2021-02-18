@@ -1,15 +1,19 @@
 'use strict';
-
+// Global Variables these puppies live on the outskirts
 let totalVotes = 0;
+// By default, the user should be presented with 25 rounds of voting before ending the session.
 let votesAuthorized = 25;
 let allProducts = [];
+// added by following class demo:
 let indexArray = [];
 let uniqueImageCount = 6;
 
 let firstImage = document.querySelector('section img:first-child');
 let secondImage = document.querySelector('section img:nth-child(2)');
 let thirdImage = document.querySelector('section img:nth-child(3)');
+// the element i need to make //where t will all go
 let myContainer = document.querySelector('section');
+// let viewResultsButton = document.querySelector('div');
 
 function Product(name, fileExtension = 'jpg') {
   this.name = name;
@@ -44,6 +48,7 @@ function getRandomIndex() {
   return Math.floor(Math.random() * allProducts.length);
 }
 
+// Constructor Function what's your junction.
 function renderProduct() {
 
   while (indexArray.length < uniqueImageCount) {
@@ -52,10 +57,12 @@ function renderProduct() {
       indexArray.push(randomIndex);
     }
   }
-
+  // console.log(indexArray);
   let firstProductIndex = indexArray.shift();
   let secondProductIndex = indexArray.shift();
   let thirdProductIndex = indexArray.shift();
+
+// cite the shift method:
 
   firstImage.src = allProducts[firstProductIndex].src;
   firstImage.title = allProducts[firstProductIndex].name;
@@ -84,10 +91,13 @@ function handleClick(event) {
   }
   renderProduct();
   if (totalVotes === votesAuthorized) {
+    // REMOVE EVENT LISTENER
     myContainer.removeEventListener('click', handleClick);
     renderChart();
   }
+  // renderChart();
 }
+
 renderProduct();
 
 function renderChart() {
@@ -99,6 +109,9 @@ function renderChart() {
     ProductViews.push(allProducts[i].views);
     ProductVotes.push(allProducts[i].votes);
   }
+  // console.log('productNames: ', productNames);
+  // console.log('ProductViews', ProductViews);
+  // console.log('ProductVotes', ProductVotes);
 
   var chartObject = {
     type: 'bar',
@@ -121,11 +134,20 @@ function renderChart() {
     },
     responsive: false,
     options: {
+      legend: {
+        labels: { 
+          fontcolor: 'rgba(153, 102, 255, 0.2)',
+      },
       scales: {
         yAxes: [{
           ticks: {
-            beginAtZero: true
-          }
+            beginAtZero: true,
+            stepSize: 1,
+            fontColor: 'rgba(153, 102, 255, 0.2)', 
+          },
+          gridLines: {
+            color: 'rgba(153, 102, 255, 0.2)',
+          },
         }]
       }
     }

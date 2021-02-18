@@ -124,7 +124,7 @@ li {
   }
  }
 
- table {
+ /* table {
    border-collapse: separate;
    border-spacing: 5px;
   border: medium solid rgb(2, 114, 184);
@@ -140,7 +140,7 @@ th, td {
 th {
   background-color: rgba(0, 34, 70, 0.5);
   font-weight: bold;
-}
+} */
 
 #container {
   margin-top: 30px;
@@ -148,7 +148,4 @@ th {
   border-radius: 20px;
 }
 
-<<<<<<< HEAD
 /* canvas#myChart.js-rendermonitor */
-=======
->>>>>>> c25a3e5f0a89255df48ad3c5e0e7a037878aaea2
