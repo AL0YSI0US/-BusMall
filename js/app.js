@@ -101,21 +101,21 @@ function handleClick(event) {
 renderProduct();
 
 function renderChart() {
-  let ProductNames = [];
+  let productNames = [];
   let ProductViews = [];
   let ProductVotes = [];
   for (let i = 0; i < allProducts.length; i++) {
-    ProductNames.push(allProducts[i].name);
+    productNames.push(allProducts[i].name);
     ProductViews.push(allProducts[i].views);
-    ProductVotes.push(allProducts[i].Votes);
+    ProductVotes.push(allProducts[i].votes);
   }
-  console.log('ProductNames: ', ProductNames);
-  console.log('ProductViews', ProductViews);
-  console.log('ProductVotes', ProductVotes);
+  // console.log('productNames: ', productNames);
+  // console.log('ProductViews', ProductViews);
+  // console.log('ProductVotes', ProductVotes);
   var chartObject = {
     type: 'bar',
     data: {
-      labels: ProductNames,
+      labels: productNames,
       datasets: [{
         label: 'Views',
         data: ProductViews,
