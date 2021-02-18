@@ -4,12 +4,16 @@ let totalVotes = 0;
 // By default, the user should be presented with 25 rounds of voting before ending the session.
 let votesAuthorized = 25;
 let allProducts = [];
+// added by following class demo:
+let indexArray = [];
+let uniqueImageCount = 6;
+
 let firstImage = document.querySelector('section img:first-child');
 let secondImage = document.querySelector('section img:nth-child(2)');
 let thirdImage = document.querySelector('section img:nth-child(3)');
 // the element i need to make //where t will all go
-let votingArena = document.querySelector('section');
-let viewResultsButton = document.querySelector('div');
+let myContainer = document.querySelector('section');
+// let viewResultsButton = document.querySelector('div');
 
 function Product(name, fileExtension = 'jpg') {
   this.name = name;
@@ -47,23 +51,18 @@ function getRandomIndex() {
 // Constructor Function what's your junction.
 function renderProduct() {
 
-  let productIndexArray = [];
-  while (productIndexArray.length < 3) {
-    let randomNumber = getRandomIndex();
-    while (!productIndexArray.includes(randomNumber)) {
-      productIndexArray.push(randomNumber);
+  while (indexArray.length < uniqueImageCount) {
+    let randomIndex = getRandomIndex();
+    while (!indexArray.includes(randomIndex)) {
+      indexArray.push(randomIndex);
     }
   }
+  // console.log(indexArray);
+  let firstProductIndex = indexArray.shift();
+  let secondProductIndex = indexArray.shift();
+  let thirdProductIndex = indexArray.shift();
 
-  // [.includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) *Developer.mozilla*
-
-  let firstProductIndex = productIndexArray.pop();
-  let secondProductIndex = productIndexArray.pop();
-  let thirdProductIndex = productIndexArray.pop();
-
-  // pop() is an inbuilt function in Python that removes and returns last value from the list or the given index value. Parameter : index (optional) - The value at index is popped out and removed. If the index is not given, then the last element is popped out and removed.
-
-  // https://www.geeksforgeeks.org/python-list-pop/#:~:text=pop()%20is%20an%20inbuilt,or%20the%20given%20index%20value.&text=Parameter%20%3A,is%20popped%20out%20and%20removed
+// cite the shift method:
 
   firstImage.src = allProducts[firstProductIndex].src;
   firstImage.title = allProducts[firstProductIndex].name;
@@ -79,7 +78,7 @@ function renderProduct() {
 }
 
 function handleClick(event) {
-  if (event.target === votingArena) {
+  if (event.target === myContainer) {
     alert('Please click on an image.');
   }
   totalVotes++;
@@ -94,32 +93,12 @@ function handleClick(event) {
   if (totalVotes === votesAuthorized) {
     // REMOVE EVENT LISTENER
     myContainer.removeEventListener('click', handleClick);
+    renderChart();
   }
-}
-renderChart();
-//                                                                    SOMEBODY GOT A LIL OUT OF ORDER Time for a walk
-//                                       VVVV------------place this stuff in the right place 
-
-function renderResults() {
-  let andTheWinnersAre = document.querySelector('ul');
-  for (let i = 0; i < allProducts.length; i++) {
-    let li = document.createElement('li');
-    li.textContent = `${allProducts[i].name} had ${allProducts[i].votes} votes and was seen ${allProducts[i].views} times.`;
-    andTheWinnersAre.appendChild(li);
-  }
-}
-
-function handleButton(event) {
-  if (totalVotes === votesAuthorized) {
-    renderResults();
-  }
+  // renderChart();
 }
 
 renderProduct();
-myContainer.addEventListener('click', handleClick);
-viewResultsButton.addEventListener('click', handleButton);
-
-///////////////////////                  create the function for the chart                    ////////////////////////////////////////
 
 function renderChart() {
   let ProductNames = [];
@@ -164,14 +143,11 @@ function renderChart() {
     }
   };
 
-  let ctx = document.getElementById('chartainer').getContext('2d');
+  let ctx = document.getElementById('myChart').getContext('2d');
   let myChart = new Chart(ctx, chartObject);
 }
 myContainer.addEventListener('click', handleClick);
 
 
-// const sentence = 'The quick brown fox jumps over the lazy dog.';
-// const word = 'fox';
-
-// console.log(`The word "${word}" ${sentence.includes(word) ? 'is' : 'is not'} in the sentence`);
-// expected output: "The word "fox" is in the sentence"
+//                                                                    SOMEBODY GOT A LIL OUT OF ORDER Time for a walk
+//                                       VVVV------------place this stuff in the right place
