@@ -24,6 +24,11 @@ And welcome to My Codefellows Bus-Mall Lab!
 11. Place the bar chart in the section located beneath your three product images.
 12. The bar charts should only appear *after* all voting data has been collected. [**Lab 12 Requirements**]
 
+---
+
+13. Implement local storage into your current application.
+14. Make sure the data persists across both browser refreshes and resets. [**Lab 13 Requirements**]
+
 ### ✨ Stretch Goals
 
 *"Try some additional charting types based off of some of the other data you collected and display them in addition to the required bar chart"*
@@ -46,9 +51,9 @@ The main thing I am realizing is that developing tact in my code is very importa
 
 The biggest hurdle I have had is with my naming conventions. Bus mall really drove this home with DOM rendering and labeling sections or containers etc. Mess those up and you may just have those fuddles follow you into the css. I have had moments where I though data was not populating only to find out that I never set any styling parameters to show my said data.
 
-My ongoing strategy is to ease up on how I want to name things because sometimes what i want to call something poorly reflects what that something does.
+My ongoing strategy is to ease up on how I want to name things because sometimes what I want to call something poorly reflects what that something does.
 
-Another sttrategy = ***This stuffs all hard = ask questions but even better dont be afraid to say you dont know what questions to ask. Just reach for some support.***
+Another sttrategy = ***This stuffs all hard*** = **ask questions but even better dont be afraid to say you dont know what questions to ask. Just reach for some support.**
 
 ### L I N K S  &  R E S O U R C E S
 
@@ -60,10 +65,9 @@ Another sttrategy = ***This stuffs all hard = ask questions but even better dont
 
 #### Head over to jsdelivr for the charts script tag! 👇🏾[select 👉🏾 github](https://www.jsdelivr.com/?docs=gh)
 
-````javascript
- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
-```
-````
+`````javascript
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+```````
 
 #### [Getting a random integer between two values | Math.random Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_integer_between_two_values "Permalink to Getting a random integer between two values")
 
@@ -117,10 +121,10 @@ console.log(plants);
 
 #### [Array.prototype.shift() | .shift Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
 
-````javascript
-                > The following code displays the myFish array before 
-                  and after removing its first element. 
-                  It also displays the removed element:
+`````javascript
+The following code displays the myFish array before 
+and after removing its first element. 
+It also displays the removed element:
 
 var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
 
@@ -134,11 +138,58 @@ console.log('myFish after:', myFish);
 
 console.log('Removed this element:', shifted);
 // Removed this element: angel
-```
+`````
+
+#### [Window.localStorage | localStorage Method](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+
+````javascript
+//A Storage object which can be used to access the current origin's local storage space.
+myStorage = window.localStorage;
+
+// The following snippet accesses the current domain's local Storage object and adds 
+// a data item to it // using Storage.setItem().
+
+localStorage.setItem('myCat', 'Tom');
+````
+
+#### [JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) | JSON.parse() Method
+
+````javascript
+const json = '{"result":true, "count":42}';
+const obj = JSON.parse(json);
+
+console.log(obj.count);
+// expected output: 42
+
+console.log(obj.result);
+// expected output: true
+
+//      >>>> Using JSON.parse()  <<<<
+ 
+JSON.parse('{}');              // {}
+JSON.parse('true');            // true
+JSON.parse('"foo"');           // "foo"
+JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
+JSON.parse('null');            // null
+````
+
+#### [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) |  JSON.stringify Method
+
+````javascript
+console.log(JSON.stringify({ x: 5, y: 6 }));
+// expected output: "{"x":5,"y":6}"
+
+console.log(JSON.stringify([new Number(3), new String('false'), new Boolean(false)]));
+// expected output: "[3,"false",false]"
+
+console.log(JSON.stringify({ x: [10, undefined, function(){}, Symbol('')] }));
+// expected output: "{"x":[10,null,null,null]}"
+
+console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
+// expected output: ""2006-01-02T15:04:05.000Z""
 
 ````
 
-<<<<<<< HEAD
 ![access](https://github.com/AL0YSI0US/about-me/blob/main/img/8grid.png?raw=true)
 
 ## Accessibility Data for Website: al0ysi0us.github.io/cookie-stand

@@ -1,4 +1,4 @@
-# Lab 12: BusMall
+# Lab 12 : BusMall
 
 Read the document in its entirety before beginning your lab. To view this lab assignment in its own tab, click [HERE](https://codefellows.github.io/code-201-guide/curriculum/class-12/lab/)
 
