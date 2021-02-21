@@ -20,34 +20,34 @@ function Product(name, fileExtension = 'jpg') {
 }
 //                                                               <<<      SETTING UP LOCAL STORAGE
 // 1. Get the data from the local storage using it's key
-var retrieveVotes = localStorage.getItem('votes';)
+var retrieveProducts = localStorage.getItem('products');
 
 //  Use local storage in a way that doesn't bReAk your existing code!
-if(retrieveVotes){
-//  2. Make that data usable again by parsing it
-  let parsedProducts = JSON.parse(retrieveVotes);
+if (retrieveProducts) {
+  //  2. Make that data usable again by parsing it
+  let parsedProducts = JSON.parse(retrieveProducts);
   allProducts = parsedProducts;
 } else {
-new Product('bag');
-new Product('banana');
-new Product('bathroom');
-new Product('boots');
-new Product('breakfast');
-new Product('bubblegum');
-new Product('chair');
-new Product('cthulhu');
-new Product('dog-duck');
-new Product('dragon');
-new Product('pen');
-new Product('pet-sweep');
-new Product('scissors');
-new Product('shark');
-new Product('sweep', 'png');
-new Product('tauntaun');
-new Product('unicorn');
-new Product('usb', 'gif');
-new Product('water-can');
-new Product('wine-glass');
+  new Product('bag');
+  new Product('banana');
+  new Product('bathroom');
+  new Product('boots');
+  new Product('breakfast');
+  new Product('bubblegum');
+  new Product('chair');
+  new Product('cthulhu');
+  new Product('dog-duck');
+  new Product('dragon');
+  new Product('pen');
+  new Product('pet-sweep');
+  new Product('scissors');
+  new Product('shark');
+  new Product('sweep', 'png');
+  new Product('tauntaun');
+  new Product('unicorn');
+  new Product('usb', 'gif');
+  new Product('water-can');
+  new Product('wine-glass');
 }
 
 function getRandomIndex() {
