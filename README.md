@@ -1,4 +1,4 @@
-# LAB - 12 [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
+# LAB - 13 [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
 
 ## bus-mall ![cs](https://img.shields.io/github/license/AL0YSI0US/bus-mall) ![open-pr](https://img.shields.io/github/issues-pr-raw/AL0YSI0US/bus-mall) ![closed-pr](https://img.shields.io/github/issues-pr-closed/AL0YSI0US/bus-mall)
 
@@ -29,7 +29,7 @@ And welcome to My Codefellows Bus-Mall Lab!
 13. Implement local storage into your current application.
 14. Make sure the data persists across both browser refreshes and resets. [**Lab 13 Requirements**]
 
-### ✨ Stretch Goals
+#### ✨ Stretch Goals
 
 *"Try some additional charting types based off of some of the other data you collected and display them in addition to the required bar chart"*
 
@@ -200,6 +200,8 @@ console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
 This work by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/AL0YSI0US/" property="cc:attributionName" rel="cc:attributionURL">AL0YSI0US</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />
 
 This license lets others distribute, remix, adapt, and build upon your work, even commercially, as long as they credit you for the original creation. This is the most accommodating of licenses offered. Recommended for maximum dissemination and use of licensed materials.
+
+
 
 <!--
 
