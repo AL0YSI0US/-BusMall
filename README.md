@@ -4,7 +4,7 @@
 
 **Hello there**,
 
-I made a thing while attending Code fellows 
+I made a thing while attending Code fellows
 
 ## Codefellows Guidance for bus-mall repository
 
@@ -26,7 +26,7 @@ I made a thing while attending Code fellows
 
 ## R E F L E C T I O N S
 
-+
++ Order of operations is important
 
 ![access](https://github.com/AL0YSI0US/about-me/blob/main/img/8grid.png?raw=true)
 
@@ -56,6 +56,7 @@ const word = 'fox';
 
 console.log(`The word "${word}" ${sentence.includes(word) ? 'is' : 'is not'} in the sentence`);
 // expected output: "The word "fox" is in the sentence"
+
 ```
 + [Array.prototype.pop() | .pop Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 
@@ -73,6 +74,7 @@ plants.pop();
 console.log(plants);
 // expected output: Array ["broccoli", "cauliflower", "cabbage"]
 ```
+
 ![Orbitron](img/orbitron.jpg)
 
 * [Google Font Orbitron](https://fonts.google.com/specimen/Orbitron?preview.text_type=custom)
